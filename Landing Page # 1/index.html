@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content=" width=device-width, initial-scale=1" name="viewport" />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+    <title>Landing Page # 1 - JamesHardie</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- >>> Bootstrap 4 | Front End Framework <<< -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <!-- >>> Custom CSS <<< -->
+    <style>
+      /*>>>>>>>> Fonts <<<<<<<<<*/
+
+      /*>>>>>>>> Poppins <<<<<<<<<*/
+
+      @import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext");
+
+      /*>>>>>>>> Common <<<<<<<<<*/
+
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+      }
+
+      /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+      /* >>>>>>>>>>>>>> Gallery <<<<<<<<<<<<< */
+      /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+      .--gallery-- .container-fluid {
+        padding: 0;
+        overflow-x: hidden;
+      }
+      .--gallery-- [class*="col-"] {
+        padding: 0;
+      }
+      .--gallery-- img {
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        padding-top: 0px;
+      }
+
+      /* >>>>>>>>>>>>>> Col # 1 <<<<<<<<<<<<<  */
+
+      /* >>>>> (Gird of 4 images) # 1 <<<<  */
+
+      .--gallery-- .col--1 .row--1 {
+        display: flex;
+      }
+      .--gallery-- .col--1 .row--1 .l--1 {
+        width: 100%;
+      }
+      .--gallery-- .col--1 .row--1 .r--1 {
+        width: 68%;
+      }
+
+      /* >>>>> (Gird of 4 images) # 2 <<<<  */
+
+      .--gallery-- .col--1 .row--2 {
+        display: flex;
+      }
+      .--gallery-- .col--1 .row--2 .l--2 {
+        width: 70%;
+        padding-right: 15px;
+      }
+      .--gallery-- .col--1 .row--2 .r--2 {
+        width: 100%;
+      }
+
+      /* >>>>> (Gird of 4 images) # 3 <<<<  */
+
+      .--gallery-- .col--1 .row--3 {
+        display: flex;
+      }
+      .--gallery-- .col--1 .row--3 .l--3 {
+        width: 72.7%;
+      }
+      .--gallery-- .col--1 .row--3 .r--3 {
+        width: 100%;
+        padding-right: 15px;
+      }
+
+      /* >>>>> (Gird of 4 images) # 4 <<<<  */
+
+      .--gallery-- .col--1 .row--4 {
+        display: flex;
+      }
+      .--gallery-- .col--1 .row--4 .l--4 {
+        width: 69.7%;
+        padding-right: 15px;
+      }
+      .--gallery-- .col--1 .row--4 .r--4 {
+        width: 100%;
+      }
+      .--gallery-- .col--1 .row--4 img {
+        padding: 0px;
+      }
+
+      /* >>>>>>>>>>>>>> Col # 2 <<<<<<<<<<<<<  */
+
+      /* >>>>> Row # 1 <<<<  */
+
+      .--gallery-- .col--2 .f--row {
+        display: flex;
+      }
+      .--gallery-- .col--2 .f--row .row--1 img {
+        padding-right: 0px;
+      }
+
+      /* >>>>> Row # 2 <<<<  */
+
+      .--gallery-- .col--2 .s--row {
+        padding: 0px 15px 15px 15px;
+      }
+      .--gallery-- .col--2 .s--row .row {
+        padding: 0px 0px 0px 15px;
+      }
+      .--gallery-- .col--2 .s--row .col-lg-8 {
+        padding: 3.5% 4% 4.5% 4%;
+        border: 4px solid #00833e;
+      }
+      .--gallery-- .col--2 .s--row .col-lg-8 h1 {
+        color: #00833e;
+        font-size: 2.8vw;
+        padding-bottom: 3%;
+      }
+      .--gallery-- .col--2 .s--row .col-lg-8 p {
+        font-size: 1vw;
+        padding-bottom: 11%;
+      }
+      .--gallery-- .col--2 .s--row .col-lg-8 a {
+        font-size: 1vw;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 16px 36px;
+        background: #00833e;
+        color: white;
+      }
+
+      .--gallery-- .col--2 .s--row .row--1 {
+        display: flex;
+      }
+      .--gallery-- .col--2 .s--row .row--1 .l--1 img {
+        margin: 0;
+      }
+
+      .--gallery-- .col--2 .s--row .row--2 {
+        display: flex;
+      }
+      .--gallery-- .col--2 .s--row .row--2 .l--2 {
+        padding: 0px 15px;
+      }
+      .--gallery-- .col--2 .s--row .row--2 img {
+        padding: 0px;
+      }
+
+      /* >>>>> Row # 3 <<<<  */
+
+      .--gallery-- .col--2 .t--row {
+        display: flex;
+      }
+      .--gallery-- .col--2 .t--row .row--1 img,
+      .--gallery-- .col--2 .t--row .row--2 img,
+      .--gallery-- .col--2 .t--row .row--3 img,
+      .--gallery-- .col--2 .t--row .row--4 img,
+      .--gallery-- .col--2 .t--row .row--5 img {
+        padding-right: 0px;
+      }
+      .--gallery-- .col--2 .t--row .img--last {
+        padding-bottom: 0px;
+      }
+
+      @media screen and (max-width: 768px) {
+        .--gallery-- .col--1,
+        .--gallery-- .col--2 .s--row .col-lg-4 {
+          display: none;
+        }
+        .--gallery-- .col--2 .s--row .col-lg-8 {
+          padding: 8% 8% 10% 8%;
+          border: 4px solid #00833e;
+          margin: 30px 40px 30px 25px;
+        }
+        .--gallery-- .col--2 .s--row .col-lg-8 h1 {
+          font-size: 30px;
+        }
+        .--gallery-- .col--2 .s--row .col-lg-8 p {
+          font-size: 16px;
+          padding-bottom: 11%;
+        }
+        .--gallery-- .col--2 .s--row .col-lg-8 a {
+          font-size: 16px;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .--gallery-- img {
+          padding: 10px;
+        }
+        .--gallery-- .col--2 .s--row .col-lg-8 p br {
+          display: none;
+        }
+        .--gallery-- .col--2 .s--row .col-lg-8 p {
+          font-size: 16px;
+          padding-bottom: 15%;
+        }
+        .--gallery-- .col--2 .s--row .col-lg-8 {
+          padding: 14% 8% 16% 8%;
+          margin: 25px 30px 30px 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>> Gallery <<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
+
+    <div class="--gallery--">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- >>>>>>>>>>>>>> Col # 1 <<<<<<<<<<<<< -->
+          <!-- It include all the images on the left -->
+          <!-- of the text area -->
+
+          <div class="col-lg-3 col--1">
+            <div class="row--1">
+              <div class="l--1">
+                <img src="./images/1.jpg" alt="" />
+              </div>
+              <div class="r--1">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <img src="./images/2.jpg" alt="" />
+                  </div>
+                  <div class="col-lg-12">
+                    <img src="./images/3.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row--2">
+              <div class="l--2">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <img src="./images/4.jpg" alt="" />
+                  </div>
+                  <div class="col-lg-12">
+                    <img src="./images/5.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="r--2">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <img src="./images/6.jpg" alt="" />
+                  </div>
+                  <div class="col-lg-12">
+                    <img src="./images/7.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row--3">
+              <div class="r--3">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <img src="./images/8.jpg" alt="" />
+                  </div>
+                  <div class="col-lg-12">
+                    <img src="./images/9.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="l--3">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <img src="./images/11.jpg" alt="" />
+                  </div>
+                  <div class="col-lg-12">
+                    <img src="./images/13.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row--4">
+              <div class="l--4">
+                <div class="col-lg-12">
+                  <img src="./images/12.jpg" alt="" />
+                </div>
+              </div>
+              <div class="r--4">
+                <div class="col-lg-12">
+                  <img src="./images/14.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- >>>>>>>>>>>>>> Col # 2 <<<<<<<<<<<<< -->
+          <!-- It include the text area and all the images-->
+          <!-- on the top/bottom/right side of the text area -->
+
+          <div class="col-lg-9 col--2">
+            <!-- >>>>>>>>>>>>>> Row # 1 <<<<<<<<<<<<< -->
+            <!-- this row include all the images -->
+            <!-- on the top of text area -->
+
+            <div class="f--row">
+              <div class="row--1">
+                <div class="row--col--1">
+                  <div class="col-lg-12">
+                    <img src="./images/15.jpg" alt="" />
+                  </div>
+                  <div class="col-lg-12">
+                    <img src="./images/16.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="row--1">
+                <div class="row--col--1">
+                  <div class="col-lg-12">
+                    <img src="./images/17.jpg" alt="" />
+                  </div>
+                  <div class="col-lg-12">
+                    <img src="./images/18.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="row--1">
+                <div class="row--col--1">
+                  <div class="col-lg-12">
+                    <img src="./images/19.jpg" alt="" />
+                  </div>
+                  <div class="col-lg-12">
+                    <img src="./images/20.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="row--1">
+                <div class="row--col--1">
+                  <div class="col-lg-12">
+                    <img src="./images/21.jpg" alt="" />
+                  </div>
+                  <div class="col-lg-12">
+                    <img src="./images/22.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="row--1">
+                <div class="row--col--1">
+                  <div class="col-lg-12">
+                    <img src="./images/23.jpg" alt="" />
+                  </div>
+                  <div class="col-lg-12">
+                    <img src="./images/24.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- >>>>>>>>>>>>>> Row # 2 <<<<<<<<<<<<< -->
+            <!-- this row include text area and the -->
+            <!-- images right side of text area -->
+
+            <div class="s--row">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="text--section">
+                    <h1>
+                      Share, <br />
+                      Inspire & Win.
+                    </h1>
+                    <p>
+                      Show us what modern design means to you <br />
+                      and inspire others with your exceptional <br />
+                      modern design. Go in the running to win
+                    </p>
+                    <a href="">Enter Now</a>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="row--1">
+                    <div class="l--1">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <img src="./images/25.jpg" alt="" />
+                        </div>
+                        <div class="col-lg-12">
+                          <img src="./images/26.jpg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="r--1">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <img src="./images/28.jpg" alt="" />
+                        </div>
+                        <div class="col-lg-12">
+                          <img src="./images/29.jpg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row--2">
+                    <div class="l--2">
+                      <div class="col-lg-12">
+                        <img src="./images/25.jpg" alt="" />
+                      </div>
+                    </div>
+                    <div class="r--2">
+                      <div class="col-lg-12">
+                        <img src="./images/28.jpg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- >>>>>>>>>>>>>> Row # 2 <<<<<<<<<<<<< -->
+            <!-- this row include all the images -->
+            <!-- on the bottom of text area -->
+
+            <div class="t--row">
+              <div class="row--1">
+                <div class="row--col--1">
+                  <div class="col-lg-12">
+                    <img src="./images/31.jpg" alt="" />
+                  </div>
+                  <div class="col-lg-12">
+                    <img class="img--last" src="./images/32.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="row--2">
+                <div class="row--col--2">
+                  <div class="col-lg-12">
+                    <img src="./images/33.jpg" alt="" />
+                  </div>
+                  <div class="col-lg-12">
+                    <img class="img--last" src="./images/34.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="row--3">
+                <div class="row--col--3">
+                  <div class="col-lg-12">
+                    <img src="./images/35.jpg" alt="" />
+                  </div>
+                  <div class="col-lg-12">
+                    <img class="img--last" src="./images/36.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="row--4">
+                <div class="row--col--4">
+                  <div class="col-lg-12">
+                    <img src="./images/37.jpg" alt="" />
+                  </div>
+                  <div class="col-lg-12">
+                    <img class="img--last" src="./images/38.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="row--5">
+                <div class="row--col--5">
+                  <div class="col-lg-12">
+                    <img src="./images/39.jpg" alt="" />
+                  </div>
+                  <div class="col-lg-12">
+                    <img class="img--last" src="./images/40.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- >>> Bootstrap | Front End Framework <<< -->
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
