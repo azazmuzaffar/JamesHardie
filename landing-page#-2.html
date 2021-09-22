@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="https://www2.jameshardie.com.au" />
+    <meta name="description" content="" />
+    <title>
+      Welcome to the James Hardie - Share, Inspire and Win Competition
+    </title>
+    <meta charset="utf-8" />
+    <meta content=" width=device-width, initial-scale=1" name="viewport" />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="description" content="" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://static-content-prod.jameshardie-digital.com.au/web-static/favicon.ico"
+    />
+    <meta name="keywords" content="" />
+
+    <!-- >>> FontAwesome <<< -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+
+    <!-- >>> Bootstrap 4 - Front End Framework <<< -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <!-- >>> jQuery <<< -->
+
+    <script
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+      type="text/javascript"
+    ></script>
+
+    <!-- >>> Custom CSS <<< -->
+    <style>
+      /* >>>>>>>> Fonts <<<<<<<<< */
+
+      /* >>>>>>>> Poppins <<<<<<<<< */
+
+      @import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext");
+
+      /*>>>>>>>> Common <<<<<<<<<*/
+
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+      }
+
+      /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+      /* >>>>>>>>>>>>>> Navbar <<<<<<<<<<<<<< */
+      /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        z-index: 999;
+        height: 90px;
+        box-shadow: 0 16px 8px -8px rgba(128, 128, 128, 0.199);
+      }
+      .navbar .container-fluid {
+        padding: 0px 10px;
+      }
+      /* >>>>>>> nav-left / Logo <<<<<<< */
+
+      .navbar .logo {
+        height: 38px;
+      }
+      @media screen and (min-width: 1920px) {
+        .navbar .container-fluid {
+          padding: 0px 8.8%;
+        }
+      }
+      /* >>>>> nav-right / Search/Buttons <<< */
+
+      .navbar ul li .nav-right {
+        text-decoration: none;
+      }
+      /* >>>>> search icon <<< */
+
+      .navbar ul li .search {
+        color: black;
+        padding-right: 20px;
+      }
+      /* >>>>> myHardie button <<< */
+
+      .navbar ul li .the-btn {
+        background: rgb(26, 214, 115);
+        background: linear-gradient(
+          90deg,
+          rgba(26, 214, 115, 1) 0%,
+          rgba(2, 173, 83, 1) 100%
+        );
+        -webkit-box-shadow: 0 0 4px rgba(95, 95, 95, 0.692);
+        box-shadow: 0 0 4px rgba(95, 95, 95, 0.692);
+        color: white;
+        padding: 16px 15px;
+        display: inline-block;
+        width: 255px;
+      }
+      .navbar ul li .the-btn:hover {
+        background: #00833e;
+      }
+      .navbar ul li .the-btn span {
+        display: inline-block;
+      }
+
+      /* >>>>> myHardie button - left <<< */
+
+      .navbar ul li .the-btn span.--left-- {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .navbar ul li .the-btn span.--left-- span {
+        font-size: 5px;
+        font-weight: bold;
+      }
+
+      /* >>>>> myHardie button - center <<< */
+
+      .navbar ul li .the-btn span.--center-- {
+        font-size: 16px;
+        padding: 0px 15px 0px 10px;
+      }
+
+      /* >>>>> myHardie button - right <<< */
+
+      .navbar ul li .the-btn span.--right-- {
+        font-size: 12px;
+        line-height: 14px;
+        position: absolute;
+        width: 40px;
+      }
+      .navbar ul li .the-btn span.--right-- p {
+        margin: 0;
+      }
+      .navbar ul li #search--products input {
+        width: 400px;
+        background: #f5f7fa;
+        outline: none;
+        border: none;
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+      #navForm {
+        display: none;
+      }
+      /* >>>>> remoing text with search icon <<< */
+
+      @media screen and (max-width: 1440px) {
+        .navbar ul li .search span span {
+          display: none;
+        }
+      }
+      /* >>>>> remoing myHardie button <<< */
+
+      @media screen and (max-width: 1300px) {
+        .navbar ul li .the-btn {
+          display: none;
+        }
+        .navbar ul li .search {
+          padding-right: 0px;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .navbar {
+          height: 70px;
+        }
+        .navbar .logo {
+          height: 30px;
+        }
+        .navbar ul li #search--products input {
+          width: 300px;
+          padding: 5px 10px;
+          font-size: 14px;
+        }
+      }
+
+      /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+      /* >>>>>>>>>>>>>> Winners <<<<<<<<<<<<< */
+      /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+      .--winners-- {
+        margin: 9% 0px;
+        padding: 0px 7.5%;
+        height: fit-content;
+      }
+      .--winners-- .container-fluid {
+        -webkit-box-shadow: 0 0 0px 10px rgb(231, 231, 231);
+        box-shadow: 0 0 10px rgb(231, 231, 231);
+        background: #f5f7fa;
+      }
+      .--winners-- .container-fluid .col-xl-6 {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* >>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+      /* >>>>>>>>>> Image Gallery <<<<<<<<<< */
+      /* >>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+      .--winners-- .image--gallery {
+        background: white;
+        padding: 8% 40px 8% 40px;
+      }
+      .--winners-- .image--gallery h1 {
+        color: #00833e;
+        font-size: 2.23vw;
+        text-align: center;
+        margin-bottom: 5%;
+      }
+      .--winners-- .image--gallery img {
+        width: 100%;
+        padding: 10px;
+      }
+      .--winners-- .image--gallery .rows {
+        display: flex;
+      }
+      .--winners-- .image--gallery .rows .column--1 {
+        width: 46.4%;
+      }
+      .--winners-- .image--gallery .rows .column--2 {
+        width: 51.3%;
+      }
+      .--winners-- .image--gallery .rows .columns img {
+        position: relative;
+      }
+      .--winners-- .image--gallery .rows .columns .col-lg-12 .--info-- {
+        position: absolute;
+        width: calc(100% - 50px);
+        text-align: center;
+        background: #00833e;
+        padding: 17px 0px 2px 0px;
+        left: 25px;
+        bottom: 10px;
+      }
+      .--winners-- .image--gallery .rows .columns .col-lg-12 .--info-- p {
+        color: white;
+        font-size: 12px;
+      }
+
+      /* >>>>>>>>>>>>>>><<<<<<<<<<<<<<<<  */
+      /* >>>>>>>>>> Text Area <<<<<<<<<< */
+      /* >>>>>>>>>>>>>>><<<<<<<<<<<<<<<<  */
+
+      .--winners-- .text--area {
+        padding: 10%;
+        background: #f5f7fa;
+      }
+      .--winners-- .text--area h1 {
+        font-size: 33px;
+        color: #00833e;
+        padding-bottom: 20px;
+      }
+      .--winners-- .text--area p {
+        padding-bottom: 40px;
+      }
+      .--winners-- .text--area .social--icons {
+        display: flex;
+      }
+      .--winners-- .text--area .social--icons a {
+        display: block;
+        padding: 10px 14px;
+        margin-right: 20px;
+        border: 3px solid #00833e;
+        border-radius: 3px;
+      }
+      .--winners-- .text--area .social--icons a i {
+        color: #00833e;
+        font-size: 27px;
+      }
+      @media screen and (max-width: 1600px) {
+        .--winners-- .text--area p br {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 1366px) {
+        .--winners-- .image--gallery {
+          background: white;
+          padding: 8% 20px 8% 25px;
+        }
+        .--winners-- .image--gallery h1 {
+          font-size: 31px;
+        }
+        .--winners-- .image--gallery .rows .column--1 {
+          width: 47.1%;
+        }
+        .--winners-- .image--gallery .rows .columns .col-lg-12 .--info-- p {
+          font-size: 9px;
+        }
+        .--winners-- .text--area h1 {
+          font-size: 28px;
+          padding-bottom: 15px;
+        }
+        .--winners-- .text--area p {
+          font-size: 15px;
+        }
+        .--winners-- .text--area .social--icons a i {
+          font-size: 23px;
+        }
+      }
+      @media screen and (max-width: 1024px) {
+        .--winners-- .image--gallery {
+          background: white;
+          padding: 8% 10px 8% 10px;
+        }
+        .--winners-- .image--gallery h1 {
+          font-size: 21px;
+        }
+        .--winners-- .image--gallery .rows .column--1 {
+          width: 46.4%;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .--winners-- {
+          margin: 100px 0px;
+          padding: 0px 5%;
+          height: fit-content;
+        }
+        .--winners-- .image--gallery .rows {
+          display: block;
+        }
+        .--winners-- .image--gallery .rows .columns {
+          width: 100%;
+        }
+        .--winners-- .image--gallery .rows .column--1 {
+          display: table-footer-group;
+        }
+        .--winners-- .image--gallery .rows .column--2 {
+          display: table-header-group;
+        }
+        .--winners-- .image--gallery .rows .columns .col-lg-12 .--info-- p {
+          font-size: 10px;
+        }
+      }
+    </style>
+    <meta name="robots" content="noindex" />
+    <script type="text/javascript">
+      piAId = "54212";
+      piCId = "74529";
+      piHostname = "pi.pardot.com";
+
+      (function () {
+        function async_load() {
+          var s = document.createElement("script");
+          s.type = "text/javascript";
+          s.src =
+            ("https:" == document.location.protocol
+              ? "https://pi"
+              : "http://cdn") + ".pardot.com/pd.js";
+          var c = document.getElementsByTagName("script")[0];
+          c.parentNode.insertBefore(s, c);
+        }
+        if (window.attachEvent) {
+          window.attachEvent("onload", async_load);
+        } else {
+          window.addEventListener("load", async_load, false);
+        }
+      })();
+    </script>
+    <script>
+      /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+      /* >>>>>>>>>>>>>> Navbar <<<<<<<<<<<<<< */
+      /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+      /* >>>> removing buttons and showing search input <<< */
+
+      function openSearch() {
+        $("#navButtons").css("display", "none");
+        $("#navForm").css("display", "block");
+        $("input").focus();
+      }
+
+      /* >>>> removing input and showing buttons back <<< */
+      /* >>>> work by clicking anywhere else but input <<< */
+
+      document.addEventListener("mouseup", function (e) {
+        let container = document.getElementById("navForm");
+        if (!container.contains(e.target)) {
+          container.style.display = "none";
+          $("#navButtons").css("display", "block");
+        }
+      });
+
+      /* >>>> Will remove the logo as well al0ng with buttons on mobile <<< */
+
+      if ($(window).width() < 600) {
+        /* >>>> removing buttons and showing search input <<< */
+
+        function openSearch() {
+          $("#navButtons").css("display", "none");
+          $("#navForm").css("display", "block");
+          $(".logo").css("display", "none");
+          $("input").focus();
+        }
+
+        /* >>>> removing input and showing buttons back <<< */
+        /* >>>> work by clicking anywhere else but input <<< */
+
+        document.addEventListener("mouseup", function (e) {
+          let container = document.getElementById("navForm");
+          if (!container.contains(e.target)) {
+            container.style.display = "none";
+            $("#navButtons").css("display", "block");
+            $(".logo").css("display", "block");
+          }
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>> Navbar <<<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
+
+    <nav class="navbar">
+      <div class="container-fluid">
+        <!-- >>>>>>>>> nav-left <<<<<<< -->
+
+        <img
+          class="logo"
+          src="https://images.ctfassets.net/rg5y8r6t6cjr/1YH8fcqWQHP9jnqBAnDbqm/21cbdb1a6782ee18863017f70231c35a/jhlogo.svg"
+          alt="Logo"
+        />
+
+        <!-- >>>>>>>> nav-right <<<<<<<< -->
+
+        <ul class="nav nav-right">
+          <li id="navButtons">
+            <!-- >>>> search icon/text <<<< -->
+            <a href="#search" class="nav-right search" onclick="openSearch()">
+              <span
+                ><i class="fas fa-search"></i> &nbsp;&nbsp;
+                <span>Search Products</span></span
+              >
+            </a>
+            <!-- >>>> myHardies button <<<< -->
+            <a href="#" class="nav-right the-btn">
+              <span class="--left--">myHardies<span>TM</span></span>
+              <span class="--center--">|</span>
+              <span class="--right--"
+                >industry
+                <p>professionals</p></span
+              >
+            </a>
+          </li>
+          <!-- Search input form <<<< -->
+          <li id="navForm">
+            <form action="" id="search--products">
+              <input type="text" placeholder="Search Products" />
+            </form>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>> Winners <<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
+
+    <div class="--winners--">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12 col-xl-6">
+            <!-- >>>>>>>>>>>>>>><<<<<<<<<<<<<<<< -->
+            <!-- >>>>>>>> Image Gallery <<<<<<<< -->
+            <!-- >>>>>>>>>>>>>>><<<<<<<<<<<<<<<< -->
+
+            <div class="image--gallery">
+              <h1>Winners from last month ...</h1>
+              <div class="rows">
+                <div class="columns column--1">
+                  <div class="row r--1">
+                    <div class="col-lg-12" pardot-region="region1">
+                      <img
+                        src="https://storage.pardot.com/53212/1632283397ntb5N3yN/thankyou_img1.jpg"
+                        alt=""
+                      />
+                      <div class="--info--">
+                        <p>[Name] used [Product] for their [location].</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-12" pardot-region="region2">
+                      <img
+                        src="https://storage.pardot.com/53212/16322836952A8tM8eo/thankyou_img2.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="columns column--2">
+                  <div class="row r--2">
+                    <div class="col-lg-12" pardot-region="region3">
+                      <img
+                        src="https://storage.pardot.com/53212/1632283787Ffv6yq1Z/thankyou_img3.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="col-lg-12" pardot-region="region4">
+                      <img
+                        src="https://storage.pardot.com/53212/1632283818prhwpfoJ/thankyou_img4.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="col-lg-12" pardot-region="region5">
+                      <img
+                        src="https://storage.pardot.com/53212/1632283862qDrqzYeP/thankyou_img5.jpg"
+                        alt=""
+                      />
+                      <div class="--info--">
+                        <p>[Name] used [Product] for their [location].</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- >>>>>>>>>>>>>>><<<<<<<<<<<<<<<< -->
+          <!-- >>>>>>>>>> Text Area <<<<<<<<<< -->
+          <!-- >>>>>>>>>>>>>>><<<<<<<<<<<<<<<< -->
+
+          <div class="col-lg-12 col-xl-6 my-auto">
+            <div class="text--area" pardot-region="region6">
+              <h1>You're in the running!</h1>
+              <p>
+                Thanks for entering our Share, Inspire & Win competition. We'll
+                reach <br />
+                out via email & SMS if you're one of the winners. In the
+                meantime, <br />
+                follow us on Instagram or Pinterest and discover other modern
+                <br />
+                designs made possible with James Hardie.
+              </p>
+              <div class="social--icons">
+                <a href="https://www.instagram.com/jameshardieau/"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="https://www.pinterest.com/jameshardiebp/"
+                  ><i class="fab fa-pinterest"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- >>> Bootstrap | Front End Framework <<< -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

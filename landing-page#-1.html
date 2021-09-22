@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content=" width=device-width, initial-scale=1" name="viewport" />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>
+      Welcome to the James Hardie - Share, Inspire and Win Competition
+    </title>
+    <meta name="description" content="" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://static-content-prod.jameshardie-digital.com.au/web-static/favicon.ico"
+    />
+    <meta name="keywords" content="" />
+
+    <!-- >>> FontAwesome <<< -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+
+    <!-- >>> Bootstrap 4 | Front End Framework <<< -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <!-- >>> jQuery <<< -->
+
+    <script
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+      type="text/javascript"
+    ></script>
+
+    <!-- >>> Custom CSS <<< -->
+    <style>
+      /*>>>>>>>> Fonts <<<<<<<<<*/
+
+      /*>>>>>>>> Poppins <<<<<<<<<*/
+
+      @import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext");
+
+      /*>>>>>>>> Common <<<<<<<<<*/
+
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+      }
+
+      /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+      /* >>>>>>>>>>>>>> Navbar <<<<<<<<<<<<<< */
+      /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        z-index: 999;
+        height: 90px;
+        box-shadow: 0 16px 8px -8px rgba(128, 128, 128, 0.199);
+      }
+      .navbar .container-fluid {
+        padding: 0px 10px;
+      }
+      /* >>>>>>> nav-left / Logo <<<<<<< */
+
+      .navbar .logo {
+        height: 38px;
+      }
+      @media screen and (min-width: 1920px) {
+        .navbar .container-fluid {
+          padding: 0px 8.8%;
+        }
+      }
+      /* >>>>> nav-right / Search/Buttons <<< */
+
+      .navbar ul li .nav-right {
+        text-decoration: none;
+      }
+      /* >>>>> search icon <<< */
+
+      .navbar ul li .search {
+        color: black;
+        padding-right: 20px;
+      }
+      /* >>>>> myHardie button <<< */
+
+      .navbar ul li .the-btn {
+        background: rgb(26, 214, 115);
+        background: linear-gradient(
+          90deg,
+          rgba(26, 214, 115, 1) 0%,
+          rgba(2, 173, 83, 1) 100%
+        );
+        -webkit-box-shadow: 0 0 4px rgba(95, 95, 95, 0.692);
+        box-shadow: 0 0 4px rgba(95, 95, 95, 0.692);
+        color: white;
+        padding: 16px 15px;
+        display: inline-block;
+        width: 255px;
+      }
+      .navbar ul li .the-btn:hover {
+        background: #00833e;
+      }
+      .navbar ul li .the-btn span {
+        display: inline-block;
+      }
+
+      /* >>>>> myHardie button - left <<< */
+
+      .navbar ul li .the-btn span.--left-- {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .navbar ul li .the-btn span.--left-- span {
+        font-size: 5px;
+        font-weight: bold;
+      }
+
+      /* >>>>> myHardie button - center <<< */
+
+      .navbar ul li .the-btn span.--center-- {
+        font-size: 16px;
+        padding: 0px 15px 0px 10px;
+      }
+
+      /* >>>>> myHardie button - right <<< */
+
+      .navbar ul li .the-btn span.--right-- {
+        font-size: 12px;
+        line-height: 14px;
+        position: absolute;
+        width: 40px;
+      }
+      .navbar ul li .the-btn span.--right-- p {
+        margin: 0;
+      }
+      .navbar ul li #search--products input {
+        width: 400px;
+        background: #f5f7fa;
+        outline: none;
+        border: none;
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+      #navForm {
+        display: none;
+      }
+      /* >>>>> remoing text with search icon <<< */
+
+      @media screen and (max-width: 1440px) {
+        .navbar ul li .search span span {
+          display: none;
+        }
+      }
+      /* >>>>> remoing myHardie button <<< */
+
+      @media screen and (max-width: 1300px) {
+        .navbar ul li .the-btn {
+          display: none;
+        }
+        .navbar ul li .search {
+          padding-right: 0px;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .navbar {
+          height: 70px;
+        }
+        .navbar .logo {
+          height: 30px;
+        }
+        .navbar ul li #search--products input {
+          width: 300px;
+          padding: 5px 10px;
+          font-size: 14px;
+        }
+      }
+
+      /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+      /* >>>>>>>>>>>>>> Gallery <<<<<<<<<<<<< */
+      /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+      .--gallery-- {
+        position: relative;
+        margin-top: 90px;
+      }
+      .--gallery-- .container-fluid {
+        padding: 0;
+        overflow-x: hidden;
+      }
+      .--gallery-- [class*="col-"] {
+        padding: 0;
+      }
+      .--gallery-- img {
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        padding-top: 0px;
+      }
+
+      /* >>>>>>>>>>>>>> Col # 1 <<<<<<<<<<<<<  */
+
+      /* >>>>> (Gird of 4 images) # 1 <<<<  */
+
+      .--gallery-- .col--1 .row--1 {
+        display: flex;
+      }
+      .--gallery-- .col--1 .row--1 .l--1 {
+        width: 100%;
+      }
+      .--gallery-- .col--1 .row--1 .r--1 {
+        width: 68%;
+      }
+
+      /* >>>>> (Gird of 4 images) # 2 <<<<  */
+
+      .--gallery-- .col--1 .row--2 {
+        display: flex;
+      }
+      .--gallery-- .col--1 .row--2 .l--2 {
+        width: 70%;
+        padding-right: 15px;
+      }
+      .--gallery-- .col--1 .row--2 .r--2 {
+        width: 100%;
+      }
+
+      /* >>>>> (Gird of 4 images) # 3 <<<<  */
+
+      .--gallery-- .col--1 .row--3 {
+        display: flex;
+      }
+      .--gallery-- .col--1 .row--3 .l--3 {
+        width: 72.7%;
+      }
+      .--gallery-- .col--1 .row--3 .r--3 {
+        width: 100%;
+        padding-right: 15px;
+      }
+
+      /* >>>>> (Gird of 4 images) # 4 <<<<  */
+
+      .--gallery-- .col--1 .row--4 {
+        display: flex;
+      }
+      .--gallery-- .col--1 .row--4 .l--4 {
+        width: 69.7%;
+        padding-right: 15px;
+      }
+      .--gallery-- .col--1 .row--4 .r--4 {
+        width: 100%;
+      }
+      .--gallery-- .col--1 .row--4 img {
+        padding: 0px;
+      }
+
+      /* >>>>>>>>>>>>>> Col # 2 <<<<<<<<<<<<<  */
+
+      /* >>>>> Row # 1 <<<<  */
+
+      .--gallery-- .col--2 .f--row {
+        display: flex;
+      }
+      .--gallery-- .col--2 .f--row .row--1 img {
+        padding-right: 0px;
+      }
+
+      /* >>>>> Row # 2 <<<<  */
+
+      .--gallery-- .col--2 .s--row {
+        padding: 0px 15px 15px 15px;
+      }
+      .--gallery-- .col--2 .s--row .row {
+        padding: 0px 0px 0px 15px;
+      }
+      .--gallery-- .col--2 .s--row .col-lg-8 {
+        padding: 3.5% 4% 4.5% 4%;
+        border: 4px solid #00833e;
+      }
+      .--gallery-- .col--2 .s--row .col-lg-8 h1 {
+        color: #00833e;
+        font-size: 2.8vw;
+        padding-bottom: 3%;
+      }
+      .--gallery-- .col--2 .s--row .col-lg-8 p {
+        font-size: 1vw;
+        padding-bottom: 11%;
+      }
+      .--gallery-- .col--2 .s--row .col-lg-8 a {
+        font-size: 1vw;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 16px 36px;
+        background: #00833e;
+        color: white;
+      }
+
+      .--gallery-- .col--2 .s--row .row--1 {
+        display: flex;
+      }
+      .--gallery-- .col--2 .s--row .row--1 .l--1 img {
+        margin: 0;
+      }
+
+      .--gallery-- .col--2 .s--row .row--2 {
+        display: flex;
+      }
+      .--gallery-- .col--2 .s--row .row--2 .l--2 {
+        padding: 0px 15px;
+      }
+      .--gallery-- .col--2 .s--row .row--2 img {
+        padding: 0px;
+      }
+
+      /* >>>>> Row # 3 <<<<  */
+
+      .--gallery-- .col--2 .t--row {
+        display: flex;
+      }
+      .--gallery-- .col--2 .t--row .row--1 img,
+      .--gallery-- .col--2 .t--row .row--2 img,
+      .--gallery-- .col--2 .t--row .row--3 img,
+      .--gallery-- .col--2 .t--row .row--4 img,
+      .--gallery-- .col--2 .t--row .row--5 img {
+        padding-right: 0px;
+      }
+      .--gallery-- .col--2 .t--row .img--last {
+        padding-bottom: 0px;
+      }
+
+      @media screen and (max-width: 768px) {
+        .--gallery-- .col--1,
+        .--gallery-- .col--2 .s--row .col-lg-4 {
+          display: none;
+        }
+        .--gallery-- .col--2 .s--row .col-lg-8 {
+          padding: 8% 8% 10% 8%;
+          border: 4px solid #00833e;
+          margin: 30px 40px 30px 25px;
+        }
+        .--gallery-- .col--2 .s--row .col-lg-8 h1 {
+          font-size: 30px;
+        }
+        .--gallery-- .col--2 .s--row .col-lg-8 p {
+          font-size: 16px;
+          padding-bottom: 11%;
+        }
+        .--gallery-- .col--2 .s--row .col-lg-8 a {
+          font-size: 16px;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .--gallery-- {
+          margin-top: 60px;
+        }
+        .--gallery-- img {
+          padding: 10px;
+        }
+        .--gallery-- .col--2 .s--row .col-lg-8 p br {
+          display: none;
+        }
+        .--gallery-- .col--2 .s--row .col-lg-8 p {
+          font-size: 16px;
+          padding-bottom: 15%;
+        }
+        .--gallery-- .col--2 .s--row .col-lg-8 {
+          padding: 14% 8% 16% 8%;
+          margin: 25px 30px 30px 15px;
+        }
+      }
+    </style>
+    <meta name="robots" content="noindex" />
+    <script type="text/javascript">
+      piAId = "54212";
+      piCId = "74529";
+      piHostname = "pi.pardot.com";
+
+      (function () {
+        function async_load() {
+          var s = document.createElement("script");
+          s.type = "text/javascript";
+          s.src =
+            ("https:" == document.location.protocol
+              ? "https://pi"
+              : "http://cdn") + ".pardot.com/pd.js";
+          var c = document.getElementsByTagName("script")[0];
+          c.parentNode.insertBefore(s, c);
+        }
+        if (window.attachEvent) {
+          window.attachEvent("onload", async_load);
+        } else {
+          window.addEventListener("load", async_load, false);
+        }
+      })();
+    </script>
+    <script>
+      /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+      /* >>>>>>>>>>>>>> Navbar <<<<<<<<<<<<<< */
+      /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+      /* >>>> removing buttons and showing search input <<< */
+
+      function openSearch() {
+        $("#navButtons").css("display", "none");
+        $("#navForm").css("display", "block");
+        $("input").focus();
+      }
+
+      /* >>>> removing input and showing buttons back <<< */
+      /* >>>> work by clicking anywhere else but input <<< */
+
+      document.addEventListener("mouseup", function (e) {
+        let container = document.getElementById("navForm");
+        if (!container.contains(e.target)) {
+          container.style.display = "none";
+          $("#navButtons").css("display", "block");
+        }
+      });
+
+      /* >>>> Will remove the logo as well al0ng with buttons on mobile <<< */
+
+      if ($(window).width() < 600) {
+        /* >>>> removing buttons and showing search input <<< */
+
+        function openSearch() {
+          $("#navButtons").css("display", "none");
+          $("#navForm").css("display", "block");
+          $(".logo").css("display", "none");
+          $("input").focus();
+        }
+
+        /* >>>> removing input and showing buttons back <<< */
+        /* >>>> work by clicking anywhere else but input <<< */
+
+        document.addEventListener("mouseup", function (e) {
+          let container = document.getElementById("navForm");
+          if (!container.contains(e.target)) {
+            container.style.display = "none";
+            $("#navButtons").css("display", "block");
+            $(".logo").css("display", "block");
+          }
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>> Navbar <<<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
+
+    <nav class="navbar">
+      <div class="container-fluid">
+        <!-- >>>>>>>>> nav-left <<<<<<< -->
+
+        <img
+          class="logo"
+          src="https://images.ctfassets.net/rg5y8r6t6cjr/1YH8fcqWQHP9jnqBAnDbqm/21cbdb1a6782ee18863017f70231c35a/jhlogo.svg"
+          alt="Logo"
+        />
+
+        <!-- >>>>>>>> nav-right <<<<<<<< -->
+
+        <ul class="nav nav-right">
+          <li id="navButtons">
+            <!-- >>>> search icon/text <<<< -->
+            <a href="#search" class="nav-right search" onclick="openSearch()">
+              <span
+                ><i class="fas fa-search"></i> &nbsp;&nbsp;
+                <span>Search Products</span></span
+              >
+            </a>
+            <!-- >>>> myHardies button <<<< -->
+            <a href="#" class="nav-right the-btn">
+              <span class="--left--">myHardies<span>TM</span></span>
+              <span class="--center--">|</span>
+              <span class="--right--"
+                >industry
+                <p>professionals</p></span
+              >
+            </a>
+          </li>
+          <!-- Search input form <<<< -->
+          <li id="navForm">
+            <form action="" id="search--products">
+              <input type="text" placeholder="Search Products" />
+            </form>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>> Gallery <<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
+
+    <div class="--gallery--">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- >>>>>>>>>>>>>> Col # 1 <<<<<<<<<<<<< -->
+          <!-- It include all the images on the left -->
+          <!-- of the text area -->
+
+          <div class="col-lg-3 col--1">
+            <div class="row--1">
+              <div class="l--1" pardot-region="1">
+                <img
+                  src="https://storage.pardot.com/53212/1632281232LJsL6NPC/1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="r--1">
+                <div class="row">
+                  <div class="col-lg-12" pardot-region="2">
+                    <img
+                      src="https://storage.pardot.com/53212/1632281260J4ACCzlq/2.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-lg-12" pardot-region="3">
+                    <img
+                      src="https://storage.pardot.com/53212/1632281277K3ZWufP2/3.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row--2">
+              <div class="l--2">
+                <div class="row">
+                  <div class="col-lg-12" pardot-region="4">
+                    <img
+                      src="https://storage.pardot.com/53212/1632281297IzLzttm0/4.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-lg-12" pardot-region="5">
+                    <img
+                      src="https://storage.pardot.com/53212/1632281360BkuUetVn/5.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="r--2">
+                <div class="row">
+                  <div class="col-lg-12" pardot-region="6">
+                    <img
+                      src="https://storage.pardot.com/53212/16322813815oVVaeNy/6.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-lg-12" pardot-region="7">
+                    <img
+                      src="https://storage.pardot.com/53212/1632281402dFt7ufPZ/7.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row--3">
+              <div class="r--3">
+                <div class="row">
+                  <div class="col-lg-12" pardot-region="8">
+                    <img
+                      src="https://storage.pardot.com/53212/1632281428wk8uCbDv/8.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-lg-12" pardot-region="9">
+                    <img
+                      src="https://storage.pardot.com/53212/1632281447fR6A97bv/9.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="l--3">
+                <div class="row">
+                  <div class="col-lg-12" pardot-region="10">
+                    <img
+                      src="https://storage.pardot.com/53212/1632281489reZP77jz/11.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-lg-12" pardot-region="11">
+                    <img
+                      src="https://storage.pardot.com/53212/1632281524SH8I4ddS/13.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row--4">
+              <div class="l--4">
+                <div class="col-lg-12" pardot-region="12">
+                  <img
+                    src="https://storage.pardot.com/53212/16322815239yapzl8a/12.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="r--4">
+                <div class="col-lg-12" pardot-region="13">
+                  <img
+                    src="https://storage.pardot.com/53212/1632281571ObBTd6UV/14.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- >>>>>>>>>>>>>> Col # 2 <<<<<<<<<<<<< -->
+          <!-- It include the text area and all the images-->
+          <!-- on the top/bottom/right side of the text area -->
+
+          <div class="col-lg-9 col--2">
+            <!-- >>>>>>>>>>>>>> Row # 1 <<<<<<<<<<<<< -->
+            <!-- this row include all the images -->
+            <!-- on the top of text area -->
+
+            <div class="f--row">
+              <div class="row--1">
+                <div class="row--col--1">
+                  <div class="col-lg-12" pardot-region="14">
+                    <img
+                      src="https://storage.pardot.com/53212/16322815726gffT51t/15.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-lg-12" pardot-region="15">
+                    <img
+                      src="https://storage.pardot.com/53212/16322815720cdrlYyk/16.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row--1">
+                <div class="row--col--1">
+                  <div class="col-lg-12" pardot-region="16">
+                    <img
+                      src="https://storage.pardot.com/53212/16322815729rOeG6Uz/17.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-lg-12" pardot-region="17">
+                    <img
+                      src="https://storage.pardot.com/53212/1632281573i9dSQMEi/18.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row--1">
+                <div class="row--col--1">
+                  <div class="col-lg-12" pardot-region="18">
+                    <img
+                      src="https://storage.pardot.com/53212/1632281573y0hGrFgM/19.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-lg-12" pardot-region="19">
+                    <img
+                      src="https://storage.pardot.com/53212/16322815817KR7ryaJ/20.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row--1">
+                <div class="row--col--1">
+                  <div class="col-lg-12" pardot-region="20">
+                    <img
+                      src="https://storage.pardot.com/53212/1632281581VW3IdsRZ/21.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-lg-12" pardot-region="21">
+                    <img
+                      src="https://storage.pardot.com/53212/1632281583vnFkpzDT/22.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row--1">
+                <div class="row--col--1">
+                  <div class="col-lg-12" pardot-region="22">
+                    <img
+                      src="https://storage.pardot.com/53212/1632281582sQOjRJWt/23.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-lg-12" pardot-region="23">
+                    <img
+                      src="https://storage.pardot.com/53212/1632281583WShauyUG/24.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- >>>>>>>>>>>>>> Row # 2 <<<<<<<<<<<<< -->
+            <!-- this row include text area and the -->
+            <!-- images right side of text area -->
+
+            <div class="s--row">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="text--section" pardot-region="24">
+                    <h1>
+                      Share, <br />
+                      Inspire & Win.
+                    </h1>
+                    <p>
+                      Show us what modern design means to you <br />
+                      and inspire others with your exceptional <br />
+                      modern design. Go in the running to win
+                    </p>
+                    <a href="">Enter Now</a>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="row--1">
+                    <div class="l--1">
+                      <div class="row">
+                        <div class="col-lg-12" pardot-region="25">
+                          <img
+                            src="https://storage.pardot.com/53212/1632281583POwLkd20/25.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="col-lg-12" pardot-region="26">
+                          <img
+                            src="https://storage.pardot.com/53212/1632281583G8rFLzqa/26.jpg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="r--1">
+                      <div class="row">
+                        <div class="col-lg-12" pardot-region="27">
+                          <img
+                            src="https://storage.pardot.com/53212/1632281584GhUNVVao/28.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="col-lg-12" pardot-region="28">
+                          <img
+                            src="https://storage.pardot.com/53212/1632281585tFCiczze/29.jpg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row--2">
+                    <div class="l--2">
+                      <div class="col-lg-12" pardot-region="29">
+                        <img
+                          src="https://storage.pardot.com/53212/1632281583POwLkd20/25.jpg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="r--2">
+                      <div class="col-lg-12" pardot-region="30">
+                        <img
+                          src="https://storage.pardot.com/53212/1632281584GhUNVVao/28.jpg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- >>>>>>>>>>>>>> Row # 2 <<<<<<<<<<<<< -->
+            <!-- this row include all the images -->
+            <!-- on the bottom of text area -->
+
+            <div class="t--row">
+              <div class="row--1">
+                <div class="row--col--1">
+                  <div class="col-lg-12" pardot-region="31">
+                    <img
+                      src="https://storage.pardot.com/53212/1632281590gH6HACNN/31.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-lg-12" pardot-region="32">
+                    <img
+                      class="img--last"
+                      src="https://storage.pardot.com/53212/1632281591esI21Vir/32.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row--2">
+                <div class="row--col--2">
+                  <div class="col-lg-12" pardot-region="33">
+                    <img
+                      src="https://storage.pardot.com/53212/163228159038PhhDcz/33.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-lg-12" pardot-region="34">
+                    <img
+                      class="img--last"
+                      src="https://storage.pardot.com/53212/1632281593yStNfkYd/34.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row--3">
+                <div class="row--col--3">
+                  <div class="col-lg-12" pardot-region="35">
+                    <img
+                      src="https://storage.pardot.com/53212/1632281594WaSiCqO4/35.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-lg-12" pardot-region="36">
+                    <img
+                      class="img--last"
+                      src="https://storage.pardot.com/53212/1632281595Z66K4Bzm/36.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row--4">
+                <div class="row--col--4">
+                  <div class="col-lg-12" pardot-region="37">
+                    <img
+                      src="https://storage.pardot.com/53212/1632281594shK3f3kh/37.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-lg-12" pardot-region="38">
+                    <img
+                      class="img--last"
+                      src="https://storage.pardot.com/53212/1632281596oAZt0umb/38.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row--5">
+                <div class="row--col--5">
+                  <div class="col-lg-12" pardot-region="39">
+                    <img
+                      src="https://storage.pardot.com/53212/1632281596Y2EhvnvK/39.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-lg-12" pardot-region="40">
+                    <img
+                      class="img--last"
+                      src="https://storage.pardot.com/53212/1632281598M5DR4ZeP/40.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- >>> Bootstrap | Front End Framework <<< -->
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
