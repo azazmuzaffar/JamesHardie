@@ -330,14 +330,15 @@
         .--winners-- .image--gallery .rows {
           display: block;
         }
+        /* swapping columns */
+        .--winners-- .--column--1-- {
+          order: 12;
+        }
+        .--winners-- .--column--2-- {
+          order: 1;
+        }
         .--winners-- .image--gallery .rows .columns {
           width: 100%;
-        }
-        .--winners-- .image--gallery .rows .column--1 {
-          display: table-footer-group;
-        }
-        .--winners-- .image--gallery .rows .column--2 {
-          display: table-header-group;
         }
         .--winners-- .image--gallery .rows .columns .col-lg-12 .--info-- p {
           font-size: 10px;
@@ -471,7 +472,7 @@
     <div class="--winners--">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-12 col-xl-6">
+          <div class="col-lg-12 col-xl-6 --column--1--">
             <!-- >>>>>>>>>>>>>>><<<<<<<<<<<<<<<< -->
             <!-- >>>>>>>> Image Gallery <<<<<<<< -->
             <!-- >>>>>>>>>>>>>>><<<<<<<<<<<<<<<< -->
@@ -531,7 +532,7 @@
           <!-- >>>>>>>>>> Text Area <<<<<<<<<< -->
           <!-- >>>>>>>>>>>>>>><<<<<<<<<<<<<<<< -->
 
-          <div class="col-lg-12 col-xl-6 my-auto">
+          <div class="col-lg-12 col-xl-6 --column--2-- my-auto">
             <div class="text--area" pardot-region="region6">
               <h1>You're in the running!</h1>
               <p>
